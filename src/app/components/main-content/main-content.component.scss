@@ -1,0 +1,35 @@
+.rock-paper-scissors {
+
+  position: relative;
+
+  .emoji {
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: ani 2s infinite;
+  }
+}
+
+@keyframes ani {
+  0% {
+    transform: rotate(0deg)
+  }
+  10% {
+    transform: rotate(25deg)
+  }
+  20% {
+    transform: rotate(-25deg)
+  }
+  30% {
+    transform: rotate(0deg)
+  }
+  40% {
+    transform: rotate(25deg)
+  }
+  50% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(0deg)
+  }
+}
