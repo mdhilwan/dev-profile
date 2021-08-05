@@ -1,0 +1,24 @@
+{
+  "name": "dev-profile",
+  "version": "1.0.0",
+  "description": "Personal Dev Profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mdhilwan@github.com/mdhilwan/dev-profile.git"
+  },
+  "keywords": [
+    "Personal",
+    "Dev",
+    "Profile"
+  ],
+  "author": "mdhilwan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdhilwan/dev-profile/issues"
+  },
+  "homepage": "https://github.com/mdhilwan/dev-profile#readme"
+}
