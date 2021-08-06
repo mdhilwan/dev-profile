@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
 
+.main-background {
+  background-color: rgb(39, 40, 44);
+  overflow: hidden;
+}
+
 .job-role {
   margin-top: -20px;
   margin-left: -10px;
@@ -26,6 +31,7 @@
 .patterns {
   position: relative;
   left: 60%;
+  bottom: -50px;
 
   .pattern {
     width: 100px; height: 100px;
