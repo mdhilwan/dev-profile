@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
 .job-role {
   margin-top: -20px;
   margin-left: -10px;
@@ -11,3 +13,88 @@
 .bg-extra-dark {
   background-color: #1e1e1e;
 }
+
+.dev-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.title-group {
+  position: relative;
+  z-index: 1;
+}
+
+.patterns {
+  position: relative;
+  left: 60%;
+
+  .pattern {
+    width: 100px; height: 100px;
+    border-radius: 100px 0px;
+    background-color: white;
+    position: absolute;
+
+    &.sm {
+      width: 50px; height: 50px;
+      border-radius: 50px 0px;
+    }
+
+    &.xs {
+      width: 25px; height: 25px;
+      border-radius: 25px 0px;
+    }
+
+    &.md {
+      width: 100px; height: 100px;
+      border-radius: 100px 0px;
+    }
+
+    &.lg {
+      width: 150px; height: 150px;
+      border-radius: 150px 0px;
+    }
+
+    &.lg {
+      width: 150px; height: 150px;
+      border-radius: 150px 0px;
+    }
+
+    &.xl {
+      width: 225px; height: 225px;
+      border-radius: 225px 0px;
+    }
+
+    &.pos-0 {
+      left: 30px; bottom: 30px;
+      transform: rotate(-85deg);
+    }
+
+    &.pos-1 {
+      left: 21px;
+      bottom: 60px;
+      transform: rotate(
+          -55deg
+      );
+    }
+
+    &.pos-2 {
+      left: 140px; bottom: -20px;
+      transform: rotate(-25deg);
+    }
+
+    &.pos-3 {
+      left: 290px; bottom: 20px;
+      transform: rotate(25deg);
+    }
+
+    &.pos-4 {
+      left: 183px; bottom: 202px;
+      transform: rotate(-15deg);
+    }
+
+    &.pos-5 {
+      left: 280px; bottom: 50px;
+      transform: rotate(-5deg);
+    }
+  }
+}
+
