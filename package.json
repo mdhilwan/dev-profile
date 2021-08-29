@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
-    "postbuld": "cp _redirects dist/dev-profile",
+    "build": "ng build --prod && cp _redirects dist/dev-profile",
     "test": "ng test",
     "lint": "ng lint"
   },
