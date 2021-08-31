@@ -1,0 +1,75 @@
+{
+  "employmentEntry": [
+    {
+      "roleEntries": [
+        {
+          "role": "Tech Lead Development Engineer",
+          "date": {
+            "from": "1 Sep 2021",
+            "to": "present"
+          }
+        },
+        {
+          "role": "Senior Software Development Engineer",
+          "date": {
+            "from": "29 Apr 2019",
+            "to": "31 Aug 2021"
+          }
+        }
+      ],
+      "companyEntry": {
+        "name": "Mastercard",
+        "address": "2200 Mastercard Blvd, O'Fallon, Missouri 63368, USA",
+        "manager": "Sigmon, Jeffrey"
+      },
+      "descriptions": {
+        "lead": "Take ownership of various Mastercard Payment Gateway Services assets, APIs, and Javascript SDKs.",
+        "details": [
+          "Heavily involved in various projects and led in the development, planning, and maintenance of the Javascript SDK code bases.",
+          "Maintain proper version control following Semantic Versioning (Semver) best practices and ensuring that latest, plus one version before is always maintained and supported.",
+          "Code quality is enforced by applying Standard JS linting and formatting, along with constant proper code reviews and pair programming ensuring top quality code to be shipped consistently.",
+          "Use Typescript to maintain and organize clear and concise methods for merchants to implement it into thei online shopping platform.",
+          "Develop and maintain codebases to integrate with the backend solution architecture using a series of Java flow services to retrieve various information to the client.",
+          "Develop RESTful APIs, controllers, and services to be integrated into the front-end Typescript and Javascript applications."
+        ]
+      },
+      "projects": [
+        "Standardized and develop a base API code for all other JS SDKs",
+        "Modernizing and future proofing of legacy platforms",
+        "Rewrite legacy platform with modern Typescript and Angular framework"
+      ]
+    },
+    {
+      "roleEntries": [
+        {
+          "role": "Senior Software Engineer — Fullstack",
+          "date": {
+            "from": "15 Oct 2018",
+            "to": "14 Apr 2019"
+          }
+        }
+      ],
+      "companyEntry": {
+        "name": "Crédit Agricole / Azqore",
+        "address": "80 Pasir Panjang Road, Singapore 117440",
+        "manager": "Julien Mulaton"
+      },
+      "descriptions": {
+        "lead": "Leading a team of Engineers to develop and maintain the software of Azqore that is used for bankers and corporate clients.",
+        "details": [
+          "Leading, building, and maintaining different projects and codebases that will be used by other developers.",
+          "Organize, maintain, and develop clean and proper version control that is being used by different groups of engineers working simultaneously in different timezones.",
+          "Ensure code quality using JSLint, peer to peer code reviews and pair programming, and also ensure best practices are followed.",
+          "Use Angular5 to organize, display, sort big data from the database.",
+          "Develop and maintain codebases to integrate with the backend solution architecture using a series of Java flow services to retrieve various information to the client.",
+          "Develop RESTful APIs, controllers, and services to be integrated into the front-end Angular application."
+        ]
+      },
+      "projects": [
+        "Build and maintain front-end libraries used in the Azqore S2I platform",
+        "Make UI/UX improvements based on user stories and feedback",
+        "Improve build script efficiency to improve build time"
+      ]
+    }
+  ]
+}
