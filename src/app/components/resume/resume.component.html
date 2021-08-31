@@ -164,120 +164,36 @@
   </div>
 </div>
 <div class="container pb-5 employment-section">
-  <div class="employment-entry row">
+  <div class="employment-entry row" *ngFor="let employmentEntry of this.employmentHistory;">
     <div class="role-entries">
-      <div class="role-entry col-12">
+      <div class="role-entry col-12" *ngFor="let roleEntries of employmentEntry.roleEntries">
         <h4 class="font-playfair">
-          <span class="bg-color px-2 me-2">Tech Lead Development Engineer</span>
-          <small class="text-muted role-entry-date">1 Sep 2021 — Present</small>
-        </h4>
-      </div>
-      <div class="role-entry col-12">
-        <h4 class="font-playfair">
-          <span class="bg-color px-2 me-2">Senior Software Development Engineer</span>
-          <small class="text-muted role-entry-date">29 Apr 2019 — 31 Aug 2021</small>
+          <span class="bg-color px-2 me-2">{{roleEntries.role}}</span>
+          <small class="text-muted role-entry-date">{{roleEntries.date.from}} — {{roleEntries.date.to}}</small>
         </h4>
       </div>
     </div>
     <div class="company-entry col-12">
       <h5 class="font-playfair">
-        <span class="bg-color px-2 me-2">Mastercard</span>
-        <small class="text-muted">2200 Mastercard Blvd, O'Fallon, Missouri 63368, USA</small>
+        <span class="bg-color px-2 me-2">{{employmentEntry.companyEntry.name}}</span>
+        <small class="text-muted">{{employmentEntry.companyEntry.address}}</small>
       </h5>
     </div>
     <div class="col-12 text-muted small">
-      <strong>Manager — </strong>Sigmon, Jeffrey
+      <strong>Manager — </strong>{{employmentEntry.companyEntry.manager}}
     </div>
     <div class="col-lg-9 mt-3">
-      <p class="lead">Take ownership of various Mastercard Payment Gateway Services assets, APIs, and Javascript
-        SDKs.</p>
+      <p class="lead">{{employmentEntry.descriptions.lead}}</p>
       <ul class="text-muted">
-        <li>
-          Heavily involved in various projects and led in the development, planning, and maintenance of the
-          Javascript SDK code bases.
-        </li>
-        <li>
-          Maintain proper version control following Semantic Versioning (Semver) best practices and ensuring that
-          latest, plus one version before is always maintained and supported.
-        </li>
-        <li>
-          Code quality is enforced by applying Standard JS linting and formatting, along with constant proper code
-          reviews and pair programming ensuring top quality code to be shipped consistently.
-        </li>
-        <li>
-          Use Typescript to maintain and organize clear and concise methods for merchants to implement it into their
-          online shopping platform.
-        </li>
-        <li>
-          Develop and maintain codebases to integrate with the backend solution architecture using a series of Java
-          flow services to retrieve various information to the client.
-        </li>
-        <li>
-          Develop RESTful APIs, controllers, and services to be integrated into the front-end Typescript and
-          Javascript applications.
+        <li *ngFor="let details of employmentEntry.descriptions.details;">
+          {{details}}
         </li>
       </ul>
     </div>
     <div class="col mt-3">
       <p class="lead">Key Projects:</p>
       <ul class="font-dev text-black-50">
-        <li>Standardized and develop a base API code for all other JS SDKs</li>
-        <li>Modernizing and future proofing of legacy platforms</li>
-        <li>Rewrite legacy platform with modern Typescript and Angular framework</li>
-      </ul>
-    </div>
-  </div>
-  <div class="employment-entry row">
-    <div class="role-entries">
-      <div class="role-entry col-12">
-        <h4 class="font-playfair">
-          <span class="bg-color px-2 me-2">Senior Software Engineer — Fullstack</span>
-          <small class="text-muted role-entry-date">15 Oct 2018 — 14 Apr 2019</small>
-        </h4>
-      </div>
-    </div>
-    <div class="company-entry col-12">
-      <h5 class="font-playfair">
-        <span class="bg-color px-2 me-2">Crédit Agricole / Azqore</span>
-        <small class="text-muted">80 Pasir Panjang Road, Singapore 117440</small>
-      </h5>
-    </div>
-    <div class="col-12 text-muted small">
-      <strong>Manager — </strong>Julien Mulaton
-    </div>
-    <div class="col-lg-9 mt-3">
-      <p class="lead">Leading a team of Engineers to develop and maintain the software of Azqore that is used for
-        bankers and corporate clients.</p>
-      <ul class="text-muted">
-        <li>
-          Leading, building, and maintaining different projects and codebases that will be used by other developers.
-        </li>
-        <li>
-          Organize, maintain, and develop clean and proper version control that is being used by different groups of
-          engineers working simultaneously in different timezones.
-        </li>
-        <li>
-          Ensure code quality using JSLint, peer to peer code reviews and pair programming, and also ensure best
-          practices are followed.
-        </li>
-        <li>
-          Use Angular5 to organize, display, sort big data from the database.
-        </li>
-        <li>
-          Develop and maintain codebases to integrate with the backend solution architecture using a series of Java flow
-          services to retrieve various information to the client.
-        </li>
-        <li>
-          Develop RESTful APIs, controllers, and services to be integrated into the front-end Angular application.
-        </li>
-      </ul>
-    </div>
-    <div class="col mt-3">
-      <p class="lead">Key Projects:</p>
-      <ul class="font-dev text-black-50">
-        <li>Build and maintain front-end libraries used in the Azqore S2I platform</li>
-        <li>Make UI/UX improvements based on user stories and feedbacks</li>
-        <li>Improve software development flow pipeline implemented in Jenkins to improve build times</li>
+        <li *ngFor="let projects of employmentEntry.projects">{{projects}}</li>
       </ul>
     </div>
   </div>

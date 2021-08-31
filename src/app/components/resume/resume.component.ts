@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// @ts-ignore
+import * as employmentHistoryData from '../../data/employment-history.json'
 
 @Component({
   selector: 'app-resume',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
+  public employmentHistory: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.employmentHistory = employmentHistoryData.employmentEntry;
+    console.log(this.employmentHistory);
   }
 
 }
