@@ -40,6 +40,12 @@
   background-color: rgb(39, 40, 44);
 }
 
+.employment-entry:not(:last-of-type),
 .education-entry:not(:last-of-type) {
   margin-bottom: 3rem;
+}
+
+.employment-entry:not(:last-of-type) {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c1d6e8;
 }
