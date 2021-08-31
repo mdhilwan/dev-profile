@@ -49,3 +49,18 @@
   padding-bottom: 2rem;
   border-bottom: 1px solid #c1d6e8;
 }
+
+.role-entry {
+  .role-entry-date {
+    font-size: 60%;
+    white-space: nowrap;
+  }
+
+  &:last-of-type {
+    opacity: 50%;
+  }
+
+  &:only-of-type {
+    opacity: initial;
+  }
+}
