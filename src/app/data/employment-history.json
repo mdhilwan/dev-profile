@@ -70,6 +70,40 @@
         "Make UI/UX improvements based on user stories and feedback",
         "Improve build script efficiency to improve build time"
       ]
+    },
+    {
+      "roleEntries": [
+        {
+          "role": "Senior Software Engineer — Front-End",
+          "date": {
+            "from": "01 Mar 2016",
+            "to": "31 Aug 2018"
+          }
+        }
+      ],
+      "companyEntry": {
+        "name": "Octus Pte Ltd",
+        "address": "65 Chulia Street, Singapore 198902",
+        "manager": "Jak Allday"
+      },
+      "descriptions": {
+        "lead": "Led a team of Front-End Engineers and constantly communicating with the product owners to gather requirements and divide the task. Responsible for ensuring the UI/UX/CX of the software is always in tip-top condition.",
+        "details": [
+          "Responsible for leading and coordinating the front-end team with the backend team conducting daily standups to align the team with what is completed yesterday, what is being done today, and who or what is blocking them.",
+          "Using JIRA as a project management tool, maintain a Release Control process to keep track of the features and hotfix branches that are in progress or awaiting release.",
+          "Collect, evaluate, and document requirements from product owners and users in order to develop a new feature for the software.",
+          "Research, design and build rapid prototypes using HTML Bootstrap for clients and product owners before going into full feature development.",
+          "Organize, display, sort big data using an MVC framework (BackboneJS, MarionetteJS) along with Javascript libraries (KendoUI).",
+          "Develop data, process, and network with email clients using Nylas as an email broker capturing and viewing user's email messages to be organized into the software.",
+          "Assess, upgrade, and maintain the NPM Gulp build process for automated build and minification of the assets.",
+          "Constantly upgrade and develop maintenance procedures for our automated NPM Gulp build process to make it efficient using many various tools.",
+          "Integrate and plan the RESTful APIs provided by the backend team with a JSON object response."
+        ]
+      },
+      "projects": [
+        "Build, design and develop new feature for recruitment CRM platform",
+        "Improve UI/UX/CX of product based on customer feedback"
+      ]
     }
   ]
 }
