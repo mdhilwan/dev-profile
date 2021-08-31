@@ -38,6 +38,13 @@
   padding-left: 37px;
 }
 
-.btn-link-rounded {
-  border-radius: 3rem;
+.links {
+  .btn {
+    margin-bottom: 0.5rem;
+  }
+  .btn:not(:last-of-type) {
+    margin-right: 0.75rem;
+  }
 }
+
+

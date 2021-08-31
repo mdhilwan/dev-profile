@@ -1,13 +1,20 @@
+<div class="sticky-top">
+  <div class="alert alert-light mb-0">
+    Resumé
+    <a href="../" class="btn float-end btn-sm btn-primary btn-link-rounded">Back</a>
+  </div>
+</div>
 <div class="bg-color">
   <div class="container">
     <div class="row align-items-end pt-4">
       <div class="col-md">
-        <h1 class="display-3"><span class="fw-lighter">Muhammad </span><span class="fw-bold border-bottom">Hilwan</span>
+        <h1 class="display-3">
+          <span class="fw-lighter">{{basicInfo.name}} </span><span class="fw-bold border-bottom">{{basicInfo.nameHighlight}}</span>
         </h1>
-        <p class="lead font-dev m-0">Tech Lead Dev Engineer at Mastercard</p>
+        <p class="lead font-dev m-0">{{basicInfo.currentPosition}}</p>
       </div>
       <div class="col-md text-end lead contacts">
-        <a class="d-block" href="mailto:mdhilwan@gmail.com">mdhilwan@gmail.com</a>
+        <a class="d-block" href="mailto:mdhilwan@gmail.com">{{basicInfo.contact}}</a>
         <a *ngIf="false" class="d-block" href="tel:+1-(312)-358-7984">🇺🇸 +1-(312)-358-7984</a>
         <a *ngIf="false" class="d-block" href="tel:+65-9017-2609">🇸🇬 +65-9017-2609</a>
       </div>
@@ -15,28 +22,8 @@
     <hr class="hr-thick">
     <div class="row">
       <div class="col-md-9">
-        <div class="font-playfair">
-          <p class="lead">
-            Used to be the fittest developer around.
-          </p>
-          <p class="lead">
-            Having scaled the 6th highest mountain in the world, Cho Oyu in Tibet. Suffered a stroke at the advance base
-            camp (20,000ft). And then proceed to summit the mountain at 8,201m (26,900ft).
-          </p>
-          <p class="lead">
-            Passionate about the mountains, even more passionate about JS, TS, Java, Angular, React, Vue and anything
-            that lives online. Love to experiment with FirebaseIO and NodeJS and explore ShodanIO once in a while.
-          </p>
-          <p class="lead">
-            With 13 years of experience, I have been very heavily involved in many projects ranging from rebuilding of
-            full enterprise wide corporate sites supporting multiple locales to experimental data visualizations
-            campaign sites to development of SDKs for payment gateway services to be consumed by merchants.
-          </p>
-          <p class="lead">
-            Love to share my knowledge and experience, and break complex things down into a simpler explanation. I used
-            to conduct classes twice a week about JavaScript, advance MVC framework and even basic CSS/HTML. There's a
-            lack of "education" on basic fundamentals of web technologies among many.
-          </p>
+        <div class="font-playfair lead white-space-pre">
+          {{basicInfo.mainDescription}}
         </div>
         <h5 class="font-dev py-5">Skills</h5>
         <div class="skills mb-5">
@@ -55,10 +42,10 @@
       <div class="col-md-3">
         <h4>Basic</h4>
         <ul>
-          <li><strong>Age -- </strong> 35</li>
-          <li><strong>Gender -- </strong> Male</li>
-          <li><strong>Nationality -- </strong> Singaporean</li>
-          <li><strong>Location -- </strong>Missouri, USA</li>
+          <li><strong>Age -- </strong> {{basicInfo.base.age}}</li>
+          <li><strong>Gender -- </strong> {{basicInfo.base.gender}}</li>
+          <li><strong>Nationality -- </strong> {{basicInfo.base.nationality}}</li>
+          <li><strong>Location -- </strong>{{basicInfo.base.location}}</li>
         </ul>
       </div>
     </div>
@@ -180,10 +167,10 @@
       </h5>
     </div>
     <div class="col-12 text-muted small">
-      <strong>Manager — </strong>{{employmentEntry.companyEntry.manager}}
+      <strong>{{employmentEntry.companyEntry.role | titlecase}} — </strong>{{employmentEntry.companyEntry.supervisor | titlecase}}
     </div>
     <div class="col-lg-9 mt-3">
-      <p class="lead">{{employmentEntry.descriptions.lead}}</p>
+      <p class="lead" *ngIf="employmentEntry.descriptions.lead">{{employmentEntry.descriptions.lead}}</p>
       <ul class="text-muted">
         <li *ngFor="let details of employmentEntry.descriptions.details;">
           {{details}}
