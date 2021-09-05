@@ -1,9 +1,0 @@
-# app.yaml
-runtime: nodejs10
-handlers:
-  - url: /(.*\..+)$
-    static_files: dist/\dev-profile/\1
-    upload: dist/dev-profile/(.*\..+)$
-  - url: /.*
-    static_files: dist/dev-profile/index.html
-    upload: dist/dev-profile/index.html
