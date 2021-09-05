@@ -1,0 +1,10 @@
+# app.yaml
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+- url: /
+ static_files: dist/dev-profile/index.html
+ upload: dist/dev-profile/index.html
+- url: /
+static_dir: dist/dev-profile
