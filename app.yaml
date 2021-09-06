@@ -1,12 +1,19 @@
-runtime: nodejs10
-
-env_variables:
-  environment: "--prod"
+runtime: python27
 
 api_version: 1
 threadsafe: true
 handlers:
 - url: /
+  secure: always
+  static_files: dist/dev-profile/index.html
+  upload: dist/dev-profile/index.html
+
+- url: /(.*\.(.+))$
+  secure: always
+  static_files: dist/dev-profile/\1
+  upload: dist/dev-profile/(.*\.(.+))$
+
+- url: /(.*)
   secure: always
   static_files: dist/dev-profile/index.html
   upload: dist/dev-profile/index.html
