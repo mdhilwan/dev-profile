@@ -6,10 +6,6 @@ handlers:
   secure: always
   static_files: dist/dev-profile/index.html
   upload: dist/dev-profile/*
-- url: /(.*)
-  secure: always
-  static_files: dist/dev-profile/index.html
-  upload: dist/dev-profile/index.html
 
 skip_files:
   - e2e/
