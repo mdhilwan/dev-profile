@@ -5,7 +5,9 @@ handlers:
 - url: /
   secure: always
   static_files: dist/dev-profile/index.html
-  upload: dist/dev-profile/*
+  upload: dist/dev-profile/index.html
+- url: /
+  static_dir: dist/dev-profile
 
 skip_files:
   - e2e/
