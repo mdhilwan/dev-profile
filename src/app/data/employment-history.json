@@ -27,11 +27,13 @@
         "lead": "Take ownership of various Mastercard Payment Gateway Services assets, APIs, and Javascript SDKs.",
         "details": [
           "Heavily involved in various projects and led in the development, planning, and maintenance of the Javascript SDK code bases.",
+          "Architected the entire frontend framework for our project. Reworked most of the builds. Converted grunt builds into webpack configs. Modernised and future proofed our frontend build flow",
+          "Design and build reusable components that becomes the building blocks for every payment methods. This base codes have to be robust enough to stand the test of time and flexible enough to be upgraded in the future",
           "Maintain proper version control following Semantic Versioning (Semver) best practices and ensuring that latest, plus one version before is always maintained and supported.",
-          "Code quality is enforced by applying Standard JS linting and formatting, along with constant proper code reviews and pair programming ensuring top quality code to be shipped consistently.",
-          "Use Typescript to maintain and organize clear and concise methods for merchants to implement it into thei online shopping platform.",
+          "Code quality is enforced by applying Standard JS/ES linting and formatting, along with constant proper code reviews and pair programming ensuring top quality code to be shipped consistently.",
+          "Use Typescript to maintain and organize clear and concise methods for merchants to implement it into their online shopping platform.",
           "Develop and maintain codebases to integrate with the backend solution architecture using a series of Java flow services to retrieve various information to the client.",
-          "Develop RESTful APIs, controllers, and services to be integrated into the front-end Typescript and Javascript applications."
+          "Build and maintain RESTful APIs, controllers, and services using Java Spring Boot to be consumed by the front-end Typescript and Javascript applications."
         ]
       },
       "projects": [
