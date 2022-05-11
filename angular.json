@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "dev-profile"
+  "defaultProject": "dev-profile",
+  "cli": {
+    "analytics": false
+  }
 }

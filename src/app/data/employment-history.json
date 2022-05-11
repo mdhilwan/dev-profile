@@ -20,7 +20,7 @@
       "companyEntry": {
         "name": "Mastercard",
         "address": "2200 Mastercard Blvd, O'Fallon, Missouri 63368, USA",
-        "supervisor": "Sigmon, Jeffrey",
+        "supervisor": "Walz, Ellen",
         "role": "manager"
       },
       "descriptions": {
@@ -40,6 +40,13 @@
         "Standardized and develop a base API code for all other JS SDKs",
         "Modernizing and future proofing of legacy platforms",
         "Rewrite legacy platform with modern Typescript and Angular framework"
+      ],
+      "techStacks": [
+        "Angular 11", "Angular 12", "Angular 13",
+        "Typescript 3+", "Typescript 4+",
+        "Java", "Java Spring Boot",
+        "SDLC", "SecureSDLC", "Jenkins", "CI/CD",
+        "RESTful API", "MicroServices"
       ]
     },
     {
@@ -73,6 +80,12 @@
         "Build and maintain front-end libraries used in the Azqore S2I platform",
         "Make UI/UX improvements based on user stories and feedback",
         "Improve build script efficiency to improve build time"
+      ],
+      "techStacks": [
+        "Angular 5", "Angular 6", "Typescript 1+",
+        "Java", "Java Spring Boot",
+        "SDLC", "SecureSDLC", "Jenkins", "CI/CD",
+        "RESTful API", "MicroServices"
       ]
     },
     {
@@ -108,6 +121,9 @@
       "projects": [
         "Build, design and develop new feature for recruitment CRM platform",
         "Improve UI/UX/CX of product based on customer feedback"
+      ],
+      "techStacks": [
+        "Backbone JS", "Marionette JS", "HTML5", "CSS3", "Docker", "Java", "Spring Boot"
       ]
     },
     {
@@ -138,6 +154,9 @@
       "projects": [
         "Data visualization using D3JS for Nikon",
         "Rebranding of Scoot corporate website"
+      ],
+      "techStacks": [
+        "D3JS", "Custom Vis", "Raphaël JS"
       ]
     },
     {
@@ -288,6 +307,9 @@
       },
       "projects": [
         "Various Flash Actionscript 2/3 campaign website"
+      ],
+      "techStacks": [
+        "Adobe Flash", "Adobe Flex", "ActionScript 2", "ActionScript 3"
       ]
     }
   ]

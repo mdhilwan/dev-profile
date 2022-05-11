@@ -178,10 +178,20 @@
       </ul>
     </div>
     <div class="col mt-3">
-      <p class="lead">Key Projects:</p>
-      <ul class="font-dev text-black-50">
-        <li *ngFor="let projects of employmentEntry.projects">{{projects}}</li>
-      </ul>
+      <div class="key-projects">
+        <p class="lead">Key Projects:</p>
+        <ul class="font-dev text-black-50">
+          <li *ngFor="let projects of employmentEntry.projects">{{projects}}</li>
+        </ul>
+      </div>
+      <div *ngIf="employmentEntry.techStacks" class="tech-stacks">
+        <p class="lead">Tech Stacks:</p>
+        <ul class="font-dev text-black-50 list-horizontal">
+          <li *ngFor="let techStack of employmentEntry.techStacks">
+            <span class="badge bg-secondary">{{techStack}}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

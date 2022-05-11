@@ -60,6 +60,10 @@
 
   &:first-of-type {
     opacity: 1;
+
+    .bg-secondary {
+      background-color: var(--bs-primary) !important;
+    }
   }
 
   &:only-of-type {
@@ -69,4 +73,17 @@
 
 .white-space-pre {
   white-space: pre-line;
+}
+
+.list-horizontal {
+  padding-left: 0rem;
+
+  li {
+    display: inline-block;
+    margin-right: 0.3rem;
+
+    &:last-child {
+      margin-right: 0rem;
+    }
+  }
 }
