@@ -5,6 +5,7 @@ import { RootComponent } from './components/root/root.component';
 
 const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
+  { path: 'login', component: ResumeComponent },
   { path: '**', component: RootComponent }
 ];
 
