@@ -7,6 +7,7 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { RootComponent } from './components/root/root.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RootComponent } from './components/root/root.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
