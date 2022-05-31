@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // @ts-ignore
-import * as employmentHistoryData from '../../data/employment-history.json'
+import * as employmentHistoryData from '../../data/employment-history.json';
 // @ts-ignore
-import * as basicInfoData from '../../data/basic-info.json'
+import * as basicInfoData from '../../data/basic-info.json';
 
 @Component({
   selector: 'app-resume',
