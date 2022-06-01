@@ -1,4 +1,4 @@
-import {Directive, ElementRef, HostBinding, Input, Renderer2} from '@angular/core';
+import {Directive, ElementRef, Renderer2} from '@angular/core';
 import {AuthService} from '../services/auth.service';
 
 @Directive({
