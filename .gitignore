@@ -51,4 +51,5 @@ node/
 target
 /projects/checkout-core/src/app/components/payment-icons/icons/min/
 package-lock.json
-/dist/
+/dist/*
+/dist/**/*
