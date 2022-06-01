@@ -11,12 +11,15 @@
     <div class="row align-items-end pt-4">
       <div class="col-md">
         <h1 class="display-3">
-          <span class="fw-lighter">{{basicInfo.name}} </span><span class="fw-bold border-bottom">{{basicInfo.nameHighlight}}</span>
+          <span class="fw-lighter" editable>{{basicInfo.name}} </span>
+          <span class="fw-bold border-bottom" editable>{{basicInfo.nameHighlight}}</span>
         </h1>
-        <p class="lead font-dev m-0">{{basicInfo.currentPosition}}</p>
+        <p class="lead font-dev m-0" editable>{{basicInfo.currentPosition}}</p>
       </div>
       <div class="col-md text-end lead contacts">
-        <a class="d-block" href="mailto:mdhilwan@gmail.com">{{basicInfo.contact}}</a>
+        <a class="d-block" href="mailto:{{basicInfo.contact}}" editable>
+          {{basicInfo.contact}}
+        </a>
         <a *ngIf="false" class="d-block" href="tel:+1-(312)-358-7984">🇺🇸 +1-(312)-358-7984</a>
         <a *ngIf="false" class="d-block" href="tel:+65-9017-2609">🇸🇬 +65-9017-2609</a>
       </div>
@@ -24,20 +27,20 @@
     <hr class="hr-thick">
     <div class="row">
       <div class="col-md-9">
-        <div class="font-playfair lead white-space-pre">
+        <div class="font-playfair lead white-space-pre" editable>
           {{basicInfo.mainDescription}}
         </div>
         <h5 class="font-dev py-5">Skills</h5>
         <div class="skills mb-5">
           <div class="row">
-            <div class="col-md">Self-taught</div>
-            <div class="col-md">Software Engineering</div>
-            <div class="col-md">Problem Solving</div>
+            <div class="col-md" editable>Self-taught</div>
+            <div class="col-md" editable>Software Engineering</div>
+            <div class="col-md" editable>Problem Solving</div>
           </div>
           <div class="row">
-            <div class="col-md">Dev Team Management</div>
-            <div class="col-md">UI / UX focused</div>
-            <div class="col-md">Agile (SAFe)</div>
+            <div class="col-md" editable>Dev Team Management</div>
+            <div class="col-md" editable>UI / UX focused</div>
+            <div class="col-md" editable>Agile (SAFe)</div>
           </div>
         </div>
       </div>

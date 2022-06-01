@@ -87,3 +87,19 @@
     }
   }
 }
+
+.editable-hover {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, royalblue, royalblue 50%, #212529 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  &:hover {
+    background-position: 0 100%;
+  }
+}

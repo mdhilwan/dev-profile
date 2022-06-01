@@ -151,6 +151,9 @@ export class AuthService {
     if (this.userRefSub) {
       this.userRefSub.unsubscribe();
     }
+
+    this.recognizeUser.next(null);
+
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['resume']);

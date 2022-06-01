@@ -13,7 +13,6 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { RootComponent } from './components/root/root.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [

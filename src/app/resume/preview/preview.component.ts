@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {AuthService} from "../../shared/services/auth.service";
 
 @Component({
   selector: 'app-preview',
@@ -11,7 +12,8 @@ export class PreviewComponent implements OnInit {
   public basicInfo: any;
   public employmentHistory: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              public authService: AuthService) {}
 
   ngOnInit(): void {
     this.http.get('https://dev-profile-backend.uc.r.appspot.com/api/user/get/basic').subscribe((data: any) => {
