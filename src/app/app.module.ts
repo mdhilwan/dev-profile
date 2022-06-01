@@ -16,6 +16,11 @@ import { RootComponent } from './components/root/root.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminBarComponent } from './components/admin-bar/admin-bar.component';
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { RegisterModalComponent } from './components/register-modal/register-modal.component';
+import { AuthService } from './shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -25,17 +30,21 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
     ResumeComponent,
     RootComponent,
     AdminBarComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    RegisterModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

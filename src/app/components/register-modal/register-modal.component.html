@@ -6,18 +6,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body form-signin">
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-secondary" (click)="authService.GoogleAuth()">
+            <i class="bi bi-google"></i> Continue with Google
+          </button>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary"><i class="bi bi-lock-fill"></i> Login</button>
       </div>
     </div>
   </div>

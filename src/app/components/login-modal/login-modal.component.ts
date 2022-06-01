@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-login-modal',
@@ -9,10 +8,12 @@ import { Observable } from 'rxjs';
 })
 export class LoginModalComponent implements OnInit {
 
-  items: Observable<any[]>;
+  recognizeUserState: string | null = null;
 
-  constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
+  constructor(public authService: AuthService) {
+    this.authService.recognizeUserState().subscribe(data => {
+      this.recognizeUserState = data;
+    });
   }
 
   ngOnInit(): void {

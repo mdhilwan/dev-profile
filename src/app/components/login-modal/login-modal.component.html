@@ -5,24 +5,23 @@
         <h5 class="modal-title" id="exampleModalLabel">Login to Edit</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body form-signin">
-        <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-          <label for="floatingInput">Email address</label>
+      <div class="modal-body">
+        <div class="alert alert-danger" *ngIf="recognizeUserState === 'Unrecognized User'">
+          <strong>{{recognizeUserState | titlecase}}</strong>
+          <p>The user that you are using is not recognised to use this feature.</p>
         </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-          <label for="floatingPassword">Password</label>
+        <div class="alert alert-success" *ngIf="recognizeUserState === 'Recognized User'">
+          <strong>{{recognizeUserState | titlecase}}</strong>
+          <p>Welcome back.</p>
         </div>
-        <ul>
-          <li class="text" *ngFor="let item of items | async">
-            {{item.name}}
-          </li>
-        </ul>
+        <div class="text-center" *ngIf="recognizeUserState !== 'Recognized User'">
+          <button type="button" class="btn btn-outline-secondary" (click)="authService.GoogleAuth()">
+            <i class="bi bi-google"></i> Log in with Google
+          </button>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary"><i class="bi bi-lock-fill"></i> Login</button>
       </div>
     </div>
   </div>
