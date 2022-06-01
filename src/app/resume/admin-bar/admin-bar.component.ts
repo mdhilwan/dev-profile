@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
@@ -6,11 +6,8 @@ import {AuthService} from '../../shared/services/auth.service';
   templateUrl: './admin-bar.component.html',
   styleUrls: ['./admin-bar.component.scss']
 })
-export class AdminBarComponent implements OnInit {
+export class AdminBarComponent {
 
   constructor(public authService: AuthService) { }
-
-  ngOnInit(): void {
-  }
 
 }

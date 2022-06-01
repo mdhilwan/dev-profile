@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AuthService } from '../../shared/services/auth.service';
   templateUrl: './login-modal.component.html',
   styleUrls: ['./login-modal.component.scss']
 })
-export class LoginModalComponent implements OnInit {
+export class LoginModalComponent {
 
   recognizeUserState: string | null = null;
 
@@ -14,9 +14,6 @@ export class LoginModalComponent implements OnInit {
     this.authService.recognizeUserState().subscribe(data => {
       this.recognizeUserState = data;
     });
-  }
-
-  ngOnInit(): void {
   }
 
 }

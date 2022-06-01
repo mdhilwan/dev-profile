@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss']
+  selector: 'app-preview',
+  templateUrl: './preview.component.html',
+  styleUrls: ['./preview.component.scss']
 })
-export class ResumeComponent implements OnInit {
+export class PreviewComponent implements OnInit {
 
   public basicInfo: any;
   public employmentHistory: any;
@@ -22,4 +22,5 @@ export class ResumeComponent implements OnInit {
       this.employmentHistory = data.employmentEntry;
     });
   }
+
 }
