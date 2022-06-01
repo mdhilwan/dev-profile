@@ -19,6 +19,8 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "object-curly-spacing": [2, "always"],
+        "quotes": [2, "single", { "avoidEscape":  true }],
         "@angular-eslint/directive-selector": [
           "error",
           {
