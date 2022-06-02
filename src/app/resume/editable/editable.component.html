@@ -1,0 +1,12 @@
+<ng-container *ngFor="let randWidth of randomWidthArray">
+  <div class="position-relative" *ngIf="!basicInfo">
+    <ngx-skeleton-loader [theme]="{
+      'width': randWidth
+    }"></ngx-skeleton-loader>
+  </div>
+</ng-container>
+<div class="d-inline-block editable-field" [ngClass]="{
+ 'editable-hover': authService.isLoggedIn
+}" [attr.contenteditable]="authService.isLoggedIn" (input)="onNameChange($event)">
+  <ng-content></ng-content>
+</div>

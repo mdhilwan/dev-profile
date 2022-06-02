@@ -1,0 +1,32 @@
+.editable-hover {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to right, royalblue, royalblue 50%, #212529 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 500ms ease;
+  &:hover {
+    background-position: 0 100%;
+  }
+}
+
+.editable-field {
+  transition: 250ms box-shadow ease-out, 250ms transform ease-out, 250ms padding ease-out;
+
+  &:focus-within {
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+    transform: scale(1.025);
+    padding: 20px;
+    border: 1px solid royalblue;
+    outline: 0 solid transparent;
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      box-shadow: none;
+      transform: none;
+    }
+  }
+}

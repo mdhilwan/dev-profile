@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PageDataService } from '../shared/services/page-data.service';
 
 @Component({
   selector: 'app-resume',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class ResumeComponent {
 
-  constructor() { }
+  constructor(private pageStateService: PageDataService) {
+    this.pageStateService.LoadAllData();
+  }
 
 }

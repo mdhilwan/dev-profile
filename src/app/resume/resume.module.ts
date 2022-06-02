@@ -15,7 +15,8 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
 import { AuthService } from '../shared/services/auth.service';
-import { EditableDirective } from '../shared/directives/editable.directive';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { EditableComponent } from './editable/editable.component';
 
 
 @NgModule({
@@ -25,11 +26,12 @@ import { EditableDirective } from '../shared/directives/editable.directive';
     RegisterModalComponent,
     ResumeComponent,
     PreviewComponent,
-    EditableDirective
+    EditableComponent
   ],
   providers: [AuthService],
   imports: [
     CommonModule,
+    NgxSkeletonLoaderModule,
     ResumeRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
