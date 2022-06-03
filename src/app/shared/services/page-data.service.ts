@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,14 @@ export class PageDataService {
 
   private loadBasicInfo(userId: string) {
     this.http.get(`http://localhost:50075/api/user/${userId}/get/basic`)
+      .pipe(
+        map((data: any) => {
+          if (data.mainDescription) {
+            data.mainDescription = data.mainDescription.join('\n\n');
+          }
+          return data;
+        })
+      )
       .subscribe(
         data => this.baseInfoData.next(data),
         () => this.baseInfoData.next({})
