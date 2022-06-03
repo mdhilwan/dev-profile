@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { PageDataService } from '../shared/services/page-data.service';
 
 @Component({
@@ -6,9 +6,11 @@ import { PageDataService } from '../shared/services/page-data.service';
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss']
 })
-export class ResumeComponent {
+export class ResumeComponent implements OnInit {
 
-  constructor(private pageStateService: PageDataService) {
+  constructor(private pageStateService: PageDataService) {}
+
+  ngOnInit(): void {
     this.pageStateService.LoadAllData();
   }
 

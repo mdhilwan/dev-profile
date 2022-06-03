@@ -4,7 +4,7 @@ import { RootComponent } from './components/root/root.component';
 
 const routes: Routes = [
   // { path: 'resume', component: ResumeComponent },
-  { path: 'resume', loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule) },
+  { path: 'resume/:userId', loadChildren: () => import('./resume/resume.module').then(m => m.ResumeModule) },
   { path: '**', component: RootComponent }
 ];
 

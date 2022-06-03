@@ -19,7 +19,7 @@ export class EditableComponent {
 
   constructor(public pageStateService: PageDataService,
               public authService: AuthService) {
-    this.pageStateService.GetBasicInfo().subscribe(data => this.basicInfo = data.basicInfo);
+    this.pageStateService.GetBasicInfo().subscribe(data => this.basicInfo = data);
   }
 
   randomWidth(): string {

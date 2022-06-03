@@ -10,14 +10,14 @@ import { AuthService } from '../../shared/services/auth.service';
 })
 export class PreviewComponent {
 
-  public basicInfo: any;
-  public employmentHistory: any;
+  public basicInfo: any = {};
+  public employmentHistory: any = [];
 
   constructor(private http: HttpClient,
               private pageStateService: PageDataService,
               public authService: AuthService) {
-    this.pageStateService.GetBasicInfo().subscribe((data: any) => this.basicInfo = data.basicInfo);
-    this.pageStateService.GetEmploymentHistory().subscribe((data: any) => this.employmentHistory = data.employmentEntry);
+    this.pageStateService.GetBasicInfo().subscribe((data: any) => this.basicInfo = data);
+    this.pageStateService.GetEmploymentHistory().subscribe((data: any) => this.employmentHistory = data);
   }
 
 }

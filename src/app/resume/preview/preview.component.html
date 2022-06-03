@@ -11,10 +11,14 @@
     <div class="row align-items-end pt-4">
       <div class="col-md">
         <h1 class="display-3">
-          <span class="fw-lighter">
+          <span class="fw-lighter" [ngClass]="{
+            'max-width-50 d-inline-block position-relative': !basicInfo
+          }">
             <app-editable>{{basicInfo?.name}}</app-editable>
           </span>
-          <span class="fw-bold border-bottom">
+          <span class="fw-bold border-bottom" [ngClass]="{
+            'max-width-50 d-inline-block position-relative': !basicInfo
+          }">
             <app-editable>{{basicInfo?.nameHighlight}}</app-editable>
           </span>
         </h1>
@@ -65,10 +69,10 @@
       <div class="col-md-3">
         <h4>Basic</h4>
         <ul>
-          <li><strong>Age -- </strong> {{basicInfo?.base.age}}</li>
-          <li><strong>Gender -- </strong> {{basicInfo?.base.gender}}</li>
-          <li><strong>Nationality -- </strong> {{basicInfo?.base.nationality}}</li>
-          <li><strong>Location -- </strong>{{basicInfo?.base.location}}</li>
+          <li><strong>Age -- </strong> {{basicInfo?.base?.dob}}</li>
+          <li><strong>Gender -- </strong> {{basicInfo?.base?.gender}}</li>
+          <li><strong>Nationality -- </strong> {{basicInfo?.base?.nationality}}</li>
+          <li><strong>Location -- </strong>{{basicInfo?.base?.location}}</li>
         </ul>
       </div>
     </div>
@@ -179,7 +183,7 @@
       <div class="role-entry col-12" *ngFor="let roleEntries of employmentEntry.roleEntries">
         <h4 class="font-playfair">
           <span class="bg-secondary text-light px-2 me-2">{{roleEntries.role}}</span>
-          <small class="text-muted role-entry-date">{{roleEntries.date.from}} — {{roleEntries.date.to}}</small>
+          <small class="text-muted role-entry-date">{{roleEntries.from}} — {{roleEntries.to}}</small>
         </h4>
       </div>
     </div>
@@ -209,7 +213,7 @@
       </div>
       <div *ngIf="employmentEntry.techStacks" class="tech-stacks">
         <p class="lead">Tech Stacks:</p>
-        <ul class="font-dev text-black-50 list-horizontal">
+        <ul class="font-dev text-black-50 list-horizontal" *ngIf="employmentEntry.techStacks">
           <li *ngFor="let techStack of employmentEntry.techStacks">
             <span class="badge bg-secondary">{{techStack}}</span>
           </li>
