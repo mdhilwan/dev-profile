@@ -73,7 +73,7 @@
       <div class="col-md-3">
         <h4>Basic</h4>
         <ul>
-          <li><strong>Age -- </strong> {{basicInfo?.base?.dob}}</li>
+          <li><strong>Age -- </strong> {{date.getFullYear() - basicInfo?.base?.dob}}</li>
           <li><strong>Gender -- </strong> {{basicInfo?.base?.gender}}</li>
           <li><strong>Nationality -- </strong> {{basicInfo?.base?.nationality}}</li>
           <li><strong>Location -- </strong>{{basicInfo?.base?.location}}</li>

@@ -12,12 +12,14 @@ export class PreviewComponent {
 
   public basicInfo: any = {};
   public employmentHistory: any = [];
+  public date: Date = new Date();
 
   constructor(private http: HttpClient,
               private pageStateService: PageDataService,
               public authService: AuthService) {
     this.pageStateService.GetBasicInfo().subscribe((data: any) => this.basicInfo = data);
     this.pageStateService.GetEmploymentHistory().subscribe((data: any) => this.employmentHistory = data);
+    setInterval(() => this.date = new Date(), 1000);
   }
 
 }
