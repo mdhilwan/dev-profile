@@ -23,7 +23,7 @@ export class PageDataService {
   }
 
   private loadBasicInfo(userId: string) {
-    this.http.get(`http://localhost:50075/api/user/${userId}/get/basic`)
+    this.http.get(`https://dev-profile-backend.uc.r.appspot.com/api/user/${userId}/get/basic`)
       .pipe(
         map((data: any) => {
           if (data.mainDescription) {
@@ -39,7 +39,7 @@ export class PageDataService {
   }
 
   private loadEmploymentHistory(userId: string) {
-    return this.http.get(`http://localhost:50075/api/user/${userId}/get/employment`)
+    return this.http.get(`https://dev-profile-backend.uc.r.appspot.com/api/user/${userId}/get/employment`)
       .subscribe(
         data => this.employmentHistoryData.next(data),
         () => this.employmentHistoryData.next([])
