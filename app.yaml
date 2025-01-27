@@ -16,14 +16,3 @@ handlers:
   secure: always
   static_files: dist/dev-profile/index.html
   upload: dist/dev-profile/index.html
-
-skip_files:
-  - e2e/
-  - node_modules/
-  - src/
-  - coverage
-  - ^(.*/)?\..*$
-  - ^(.*/)?.*\.json$
-  - ^(.*/)?.*\.md$
-  - ^(.*/)?.*\.yaml$
-  - ^LICENSE
