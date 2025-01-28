@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "npm run env:generate",
     "start": "ng serve",
+    "prebuild": "npm run env:generate",
     "build": "ng build --configuration production",
     "test": "ng test",
-    "lint": "ng lint --fix"
+    "lint": "ng lint --fix",
+    "env:newenv": "printenv > .env",
+    "env:generate": "node set-env.js"
   },
   "private": true,
   "dependencies": {
@@ -23,6 +27,7 @@
     "@types/bootstrap": "^5.1.12",
     "bootstrap": "^5.1.0",
     "bootstrap-icons": "^1.8.3",
+    "dotenv": "^16.4.7",
     "firebase": "^9.8.2",
     "jquery": "^3.6.0",
     "ngx-skeleton-loader": "^5.0.0",

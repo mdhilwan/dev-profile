@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PageDataService } from '../shared/services/page-data.service';
 
 @Component({

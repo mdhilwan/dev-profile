@@ -53,3 +53,4 @@ target
 package-lock.json
 /dist/*
 /dist/**/*
+.env
