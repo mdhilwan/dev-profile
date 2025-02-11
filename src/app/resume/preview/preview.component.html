@@ -1,4 +1,4 @@
-<div class="sticky-top">
+<div class="sticky-top d-print-none">
   <div class="alert alert-light mb-0">
     Resumé
     <div class="btn-group btn-group-sm btn-link-rounded float-end">
@@ -7,19 +7,19 @@
   </div>
 </div>
 <div class="bg-color">
-  <div id="basic-info" class="container">
+  <div id="basic-info" [ngClass]="getContainer()">
     <div class="row align-items-end pt-4">
       <div class="col-md">
         <h1 class="display-3">
           <span class="fw-lighter" [ngClass]="{
             'max-width-50 d-inline-block position-relative': !basicInfo
           }">
-            <app-editable>{{basicInfo?.name}}</app-editable>
+            <app-editable>{{ basicInfo?.name }}</app-editable>
           </span>
           <span class="fw-bold border-bottom" [ngClass]="{
             'max-width-50 d-inline-block position-relative': !basicInfo
           }">
-            <app-editable>{{basicInfo?.nameHighlight}}</app-editable>
+            <app-editable>{{ basicInfo?.nameHighlight }}</app-editable>
           </span>
         </h1>
       </div>
@@ -27,12 +27,12 @@
     <div class="row align-items-end">
       <div class="col-md">
         <p class="lead font-dev m-0">
-          <app-editable>{{basicInfo?.currentPosition}}</app-editable>
+          <app-editable>{{ basicInfo?.currentPosition }}</app-editable>
         </p>
       </div>
       <div class="col-md text-end lead contacts">
         <a class="d-inline-block" href="mailto:{{basicInfo?.contact}}">
-          <app-editable>{{basicInfo?.contact}}</app-editable>
+          <app-editable>{{ basicInfo?.contact }}</app-editable>
         </a>
         <a *ngIf="false" class="d-block" href="tel:+1-(312)-358-7984">🇺🇸 +1-(312)-358-7984</a>
         <a *ngIf="false" class="d-block" href="tel:+65-9017-2609">🇸🇬 +65-9017-2609</a>
@@ -42,7 +42,7 @@
     <div class="row">
       <div class="col-md-9">
         <div class="font-playfair lead white-space-pre">
-          <app-editable [count]="10">{{basicInfo?.mainDescription}}</app-editable>
+          <app-editable [count]="10">{{ basicInfo?.mainDescription }}</app-editable>
         </div>
         <h5 class="font-dev py-5">Skills</h5>
         <div class="skills mb-5">
@@ -73,156 +73,166 @@
       <div class="col-md-3">
         <h4>Basic</h4>
         <ul>
-          <li><strong>Age -- </strong> {{date.getFullYear() - basicInfo?.base?.dob}}</li>
-          <li><strong>Gender -- </strong> {{basicInfo?.base?.gender}}</li>
-          <li><strong>Nationality -- </strong> {{basicInfo?.base?.nationality}}</li>
-          <li><strong>Location -- </strong>{{basicInfo?.base?.location}}</li>
+          <li><strong>Age -- </strong> {{ date.getFullYear() - basicInfo?.base?.dob }}</li>
+          <li><strong>Gender -- </strong> {{ basicInfo?.base?.gender }}</li>
+          <li><strong>Nationality -- </strong> {{ basicInfo?.base?.nationality }}</li>
+          <li><strong>Location -- </strong>{{ basicInfo?.base?.location }}</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
-<div class="sticky-top bg-white">
-  <div class="container">
-    <div class="row-cols-auto">
-      <h5 class="my-5 font-dev py-3">Tech Stack</h5>
+<section aria-label="Tech Stack">
+  <div class="sticky-top bg-white">
+    <div [ngClass]="getContainer()">
+      <div class="row-cols-auto">
+        <h5 class="font-dev py-3" [ngClass]="isPrinting ? '' : 'my-5'">Tech Stack</h5>
+      </div>
     </div>
   </div>
-</div>
-<div class="container pb-5">
-  <div class="row">
-    <div class="col-md">
-      <h5 class="text-decoration-underline">Front-End</h5>
-      <ul>
-        <li>Language: Javascript, Typescript, ES2020, HTML, CSS (SASS, SCSS, LESS)</li>
-        <li>HTML Framework: Bootstrap, Material, Foundation</li>
-        <li>JS/TS Framework: React, Angular, Vue, Backbone, Marionette</li>
-        <li>Testing Framework: Jasmine, Jest, Mocha, Selenium Webdriver</li>
-        <li>Tools: NodeJs, Webpack, Gulp, Grunt, Terser, Browserify, Plumber</li>
-      </ul>
-      <h5 class="text-decoration-underline">Cloud</h5>
-      <ul>
-        <li>AWS</li>
-        <li>EC2 Lamp</li>
-      </ul>
-    </div>
-    <div class="col-md">
-      <h5 class="text-decoration-underline">Backend</h5>
-      <ul>
-        <li>Language: Node, Java, PHP</li>
-        <li>Framework: Spring, Spring Boot</li>
-        <li>Database: MySql, Mongo, Firebase, PostGres</li>
-      </ul>
-      <h5 class="text-decoration-underline">Tools</h5>
-      <ul>
-        <li>CI / CD: Bamboo, Jenkins</li>
-        <li>Editor: Sublime, IntelliJ</li>
-        <li>SVN: Github, Gitlab, Bitbucket</li>
-        <li>Mgmt: JIRA</li>
-        <li>Others: Postman, ShodanIO, RoboMongo, PgAdmin</li>
-      </ul>
-    </div>
-  </div>
-</div>
-<div class="bg-color-dark pb-5"></div>
-<div class="sticky-top bg-color-dark text-light">
-  <div class="container">
-    <div class="row-cols-auto">
-      <h5 class="font-dev py-3 m-0">Education</h5>
-    </div>
-  </div>
-</div>
-<div class="bg-color-dark text-light">
-  <div class="container py-5 education-section">
+  <div class="pb-5" [ngClass]="getContainer()">
     <div class="row">
-      <div class="education-entry col-lg">
-        <div class="row">
-          <div class="col">
-            <small class="text-muted">01/02/2015 — 01/11/2017</small>
-            <h4 class="font-dev">Bachelor of Commerce, Marketing</h4>
-            <p><a class="link-light" href="https://www.murdoch.edu.au/" target="_blank">Murdoch University,
-              Australia</a>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-white-50">
-            Decided to upgrade myself with a Ba in Marketing from Murdoch University. Was very hesitant initially
-            however decided that a Marketing degree will be useful for me when I conduct demos and try to sell products
-            to potential clients.
-          </div>
-        </div>
-      </div>
-      <div class="education-entry col-lg">
-        <div class="row">
-          <div class="col">
-            <small class="text-muted">01/05/2003 — 31/02/2006</small>
-            <h4 class="font-dev">Diploma with Merit, Digital Media Design</h4>
-            <p><a class="link-light" href="https://www.nyp.edu.sg/schools/sdm.html" target="_blank">Nanyang Polytechnic,
-              School of Design and Media,
-              Singapore</a>
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-white-50">
-            Was in Year 2 of Poly when I realised that I have a "thing" for coding and very few were interested in it.
-            So I kept doing it and never stopped.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="sticky-top bg-white">
-  <div class="container">
-    <div class="row-cols-auto">
-      <h5 class="my-5 font-dev py-3">Employment History</h5>
-    </div>
-  </div>
-</div>
-<div class="container pb-5 employment-section">
-  <div class="employment-entry row" *ngFor="let employmentEntry of this.employmentHistory;">
-    <div class="role-entries">
-      <div class="role-entry col-12" *ngFor="let roleEntries of employmentEntry.roleEntries">
-        <h4 class="font-playfair">
-          <span class="bg-secondary text-light px-2 me-2">{{roleEntries.role}}</span>
-          <small class="text-muted role-entry-date">{{roleEntries.from}} — {{roleEntries.to}}</small>
-        </h4>
-      </div>
-    </div>
-    <div class="company-entry col-12">
-      <h5 class="font-playfair">
-        <span class="bg-color px-2 me-2">{{employmentEntry.companyEntry.name}}</span>
-        <small class="text-muted">{{employmentEntry.companyEntry.address}}</small>
-      </h5>
-    </div>
-    <div class="col-12 text-muted small">
-      <strong>{{employmentEntry.companyEntry.role | titlecase}} — </strong>{{employmentEntry.companyEntry.supervisor | titlecase}}
-    </div>
-    <div class="col-lg-9 mt-3">
-      <p class="lead" *ngIf="employmentEntry.descriptions.lead">{{employmentEntry.descriptions.lead}}</p>
-      <ul class="text-muted">
-        <li *ngFor="let details of employmentEntry.descriptions.details;">
-          {{details}}
-        </li>
-      </ul>
-    </div>
-    <div class="col mt-3">
-      <div class="key-projects">
-        <p class="lead">Key Projects:</p>
-        <ul class="font-dev text-black-50">
-          <li *ngFor="let projects of employmentEntry.projects">{{projects}}</li>
+      <div class="col-md">
+        <h5 class="text-decoration-underline">Front-End</h5>
+        <ul>
+          <li>Language: Javascript, Typescript, ES2020, HTML, CSS (SASS, SCSS, LESS)</li>
+          <li>HTML Framework: Bootstrap, Material, Foundation</li>
+          <li>JS/TS Framework: React, Angular, Vue, Backbone, Marionette</li>
+          <li>Testing Framework: Jasmine, Jest, Mocha, Selenium Webdriver</li>
+          <li>Tools: NodeJs, Webpack, Gulp, Grunt, Terser, Browserify, Plumber</li>
+        </ul>
+        <h5 class="text-decoration-underline">Cloud</h5>
+        <ul>
+          <li>AWS</li>
+          <li>EC2 Lamp</li>
         </ul>
       </div>
-      <div *ngIf="employmentEntry.techStacks" class="tech-stacks">
-        <p class="lead">Tech Stacks:</p>
-        <ul class="font-dev text-black-50 list-horizontal" *ngIf="employmentEntry.techStacks">
-          <li *ngFor="let techStack of employmentEntry.techStacks">
-            <span class="badge bg-secondary">{{techStack}}</span>
+      <div class="col-md">
+        <h5 class="text-decoration-underline">Backend</h5>
+        <ul>
+          <li>Language: Node, Java, PHP</li>
+          <li>Framework: Spring, Spring Boot</li>
+          <li>Database: MySql, Mongo, Firebase, PostGres</li>
+        </ul>
+        <h5 class="text-decoration-underline">Tools</h5>
+        <ul>
+          <li>CI / CD: Bamboo, Jenkins</li>
+          <li>Editor: Sublime, IntelliJ</li>
+          <li>SVN: Github, Gitlab, Bitbucket</li>
+          <li>Mgmt: JIRA</li>
+          <li>Others: Postman, ShodanIO, RoboMongo, PgAdmin</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section aria-label="Employment History">
+  <div class="sticky-top bg-white">
+    <div [ngClass]="getContainer()">
+      <div class="row-cols-auto">
+        <h5 class="font-dev py-3" [ngClass]="isPrinting ? '' : 'my-5'">Employment History</h5>
+      </div>
+    </div>
+  </div>
+  <div class="pb-5 employment-section" [ngClass]="getContainer()">
+    <div class="employment-entry row" *ngFor="let employmentEntry of this.employmentHistory;">
+      <div class="role-entries">
+        <div class="role-entry col-12" *ngFor="let roleEntries of employmentEntry.roleEntries">
+          <h4 class="font-playfair">
+            <span class="bg-secondary text-light px-2 me-2">{{ roleEntries.role }}</span>
+            <small class="text-muted role-entry-date">{{ roleEntries.from }} — {{ roleEntries.to }}</small>
+          </h4>
+        </div>
+      </div>
+      <div class="company-entry col-12">
+        <h5 class="font-playfair">
+          <span class="bg-color px-2 me-2">{{ employmentEntry.companyEntry.name }}</span>
+          <small class="text-muted">{{ employmentEntry.companyEntry.address }}</small>
+        </h5>
+      </div>
+      <div class="col-12 text-muted small">
+        <strong>{{ employmentEntry.companyEntry.role | titlecase }}
+          — </strong>{{ employmentEntry.companyEntry.supervisor | titlecase }}
+      </div>
+      <div class="col-9 mt-3">
+        <p class="lead" *ngIf="employmentEntry.descriptions.lead">{{ employmentEntry.descriptions.lead }}</p>
+        <ul class="text-muted">
+          <li *ngFor="let details of employmentEntry.descriptions.details;">
+            {{ details }}
           </li>
         </ul>
       </div>
+      <div class="col mt-3">
+        <div class="key-projects">
+          <p class="lead">Key Projects:</p>
+          <ul class="font-dev text-black-50">
+            <li *ngFor="let projects of employmentEntry.projects">{{ projects }}</li>
+          </ul>
+        </div>
+        <div *ngIf="employmentEntry.techStacks" class="tech-stacks">
+          <p class="lead">Tech Stacks:</p>
+          <ul class="font-dev text-black-50 list-horizontal" *ngIf="employmentEntry.techStacks">
+            <li *ngFor="let techStack of employmentEntry.techStacks">
+              <span class="badge bg-secondary">{{ techStack }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<section aria-label="Education">
+  <div class="bg-color-dark pb-5"></div>
+  <div class="sticky-top bg-color-dark text-light">
+    <div [ngClass]="getContainer()">
+      <div class="row-cols-auto">
+        <h5 class="font-dev py-3 m-0">Education</h5>
+      </div>
+    </div>
+  </div>
+  <div class="bg-color-dark text-light">
+    <div class="py-5 education-section" [ngClass]="getContainer()">
+      <div class="row">
+        <div class="education-entry col-lg">
+          <div class="row">
+            <div class="col">
+              <small class="text-muted">01/02/2015 — 01/11/2017</small>
+              <h4 class="font-dev">Bachelor of Commerce, Marketing</h4>
+              <p><a class="link-light" href="https://www.murdoch.edu.au/" target="_blank">Murdoch University,
+                Australia</a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-white-50">
+              Decided to upgrade myself with a Ba in Marketing from Murdoch University. Was very hesitant initially
+              however decided that a Marketing degree will be useful for me when I conduct demos and try to sell
+              products
+              to potential clients.
+            </div>
+          </div>
+        </div>
+        <div class="education-entry col-lg">
+          <div class="row">
+            <div class="col">
+              <small class="text-muted">01/05/2003 — 31/02/2006</small>
+              <h4 class="font-dev">Diploma with Merit, Digital Media Design</h4>
+              <p><a class="link-light" href="https://www.nyp.edu.sg/schools/sdm.html" target="_blank">Nanyang
+                Polytechnic,
+                School of Design and Media,
+                Singapore</a>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-white-50">
+              Was in Year 2 of Poly when I realised that I have a "thing" for coding and very few were interested in it.
+              So I kept doing it and never stopped.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
